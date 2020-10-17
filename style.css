@@ -21,19 +21,29 @@
     display: inline-block;
 }
 
-.txt::after {
-    content: 'Loading...';
+.txt2 {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 55%;
     transform: rotateX(180deg);
-    color: linear-gradient(to bottom right, yellow, white);
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    /*imp*/
+    -webkit-text-fill-color: transparent;
+    /*imp*/
 }
 
 .txt span {
     position: relative;
     display: inline-block;
-    color: red;
+    color: black;
+    animation: animate 1.5s ease-in-out infinite;
+    animation-delay: calc(0.1s*var(--i));
+}
+
+.txt2 span {
+    position: relative;
+    display: inline-block;
+    color: linear-gradient( rgba(27, 212, 89, 0.2));
     animation: animate 1.5s ease-in-out infinite;
     animation-delay: calc(0.1s*var(--i));
 }
